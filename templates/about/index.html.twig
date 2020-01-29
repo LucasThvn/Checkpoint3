@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% set page = "about" %}
+
+{% block title %}About - Wild Circus{% endblock %}
+
+{% block body %}
+    <section class="left">
+        <h1>ABOUT US</h1>
+        <p class="about-paragraph">
+            Let yourself be carried away in a world where the real and the imaginary are one, in the company of our talented magicians, discover a wonderful world limited only by your imagination.
+        </p>
+        <button>
+            <div>VISIT OUR GALLERY</div>
+        </button>
+    </section>
+    <section class="right">
+        <img src="{{ asset('build/images/Jungler.gif') }}" alt="jungler">
+    </section>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% set page = "home" %}
+
+{% block title %}Home - Wild Circus{% endblock %}
+
+{% block body %}
+    <section class="left">
+        <h1>WILD<br>CIRCUS</h1>
+        <h2>WELCOME TO THE JUNGLE !</h2>
+        <button>
+            <svg viewBox="0 0 27.124 31.001">
+                <path id="Icon_awesome-play" data-name="Icon awesome-play"
+                      d="M25.7,13,4.384.4A2.89,2.89,0,0,0,0,2.9V28.094a2.9,2.9,0,0,0,4.384,2.5L25.7,18A2.9,2.9,0,0,0,25.7,13Z"
+                      transform="translate(0 -0.002)"/>
+            </svg>
+            <div>WATCH A TRAILER</div>
+        </button>
+    </section>
+    <section class="right">
+        <img src="{{ asset('build/images/Jungler.gif') }}" alt="jungler">
+    </section>
+{% endblock %}
