@@ -10,7 +10,6 @@ body {
         line-height: calc(105px + 6 * ((100vw - 320px) / 680));
         font-weight: normal;
         font-size: calc(110px + 6 * ((100vw - 320px) / 680));
-        font-min-size: 100px;
         color: $light-color;
         margin: 0;
     }
@@ -81,6 +80,14 @@ body {
                 font-weight: 500;
                 font-size: calc(12px + 6 * ((100vw - 320px) / 680));
                 margin: 25px 0;
+            }
+
+            .about-paragraph {
+                width: 25vw;
+                font-family: $text-font;
+                margin: 35px 0;
+                color: $light-color;
+                font-size: calc(8px + 6 * ((100vw - 320px) / 680));
             }
 
             button {

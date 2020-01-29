@@ -1,24 +1,24 @@
 <header>
     <div class="wild">WILD CODE SCHOOL</div>
     <div class="nav">
-        <div class="active"><a href="{{ path('home') }}">HOME</a></div>
+        <div class="{% if page == "home" %}active{% endif %}"><a href="{{ path('home') }}">HOME</a></div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.159 11.159">
             <path id="Icon_awesome-dot-circle" data-name="Icon awesome-dot-circle"
                   d="M6.142.563a5.579,5.579,0,1,0,5.579,5.579A5.579,5.579,0,0,0,6.142.563Zm1.8,5.579a1.8,1.8,0,1,1-1.8-1.8A1.8,1.8,0,0,1,7.942,6.142Z"
                   transform="translate(-0.563 -0.563)"/>
         </svg>
-        <div><a href="#">ABOUT</a></div>
+        <div class="{% if page == "about" %}active{% endif %}"><a href="{{ path('about') }}">ABOUT</a></div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.159 11.159">
             <path id="Icon_awesome-dot-circle" data-name="Icon awesome-dot-circle"
                   d="M6.142.563a5.579,5.579,0,1,0,5.579,5.579A5.579,5.579,0,0,0,6.142.563Zm1.8,5.579a1.8,1.8,0,1,1-1.8-1.8A1.8,1.8,0,0,1,7.942,6.142Z"
                   transform="translate(-0.563 -0.563)"/>
         </svg>
-        <div><a href="#">TICKETS</a></div>
+        <div class="{% if page == "tickets" %}active{% endif %}"><a href="#">TICKETS</a></div>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.159 11.159">
             <path id="Icon_awesome-dot-circle" data-name="Icon awesome-dot-circle"
                   d="M6.142.563a5.579,5.579,0,1,0,5.579,5.579A5.579,5.579,0,0,0,6.142.563Zm1.8,5.579a1.8,1.8,0,1,1-1.8-1.8A1.8,1.8,0,0,1,7.942,6.142Z"
                   transform="translate(-0.563 -0.563)"/>
         </svg>
-        <div><a href="#">GALLERY</a></div>
+        <div class="{% if page == "gallery" %}active{% endif %}"><a href="#">GALLERY</a></div>
     </div>
 </header>
