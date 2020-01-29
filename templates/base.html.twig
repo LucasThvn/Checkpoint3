@@ -3,10 +3,20 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
+            <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&display=swap" rel="stylesheet">
+        {% endblock %}
+        {{ encore_entry_link_tags('app') }}
     </head>
     <body>
-        {% block body %}{% endblock %}
+        {% block header%}
+            {% include "header.html.twig" %}
+        {% endblock %}
+        <main>
+            {% block body %}{% endblock %}
+        </main>
         {% block javascripts %}{% endblock %}
+        {{ encore_entry_script_tags('app') }}
     </body>
 </html>

@@ -1,0 +1,138 @@
+@import "vars";
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+
+    h1 {
+        font-family: $title-font;
+        line-height: calc(105px + 6 * ((100vw - 320px) / 680));
+        font-weight: normal;
+        font-size: calc(110px + 6 * ((100vw - 320px) / 680));
+        font-min-size: 100px;
+        color: $light-color;
+        margin: 0;
+    }
+
+    header {
+        height: 70px;
+        width: calc(100% - 7% - 40px);
+        position: absolute;
+        padding: 0 40px 0 7%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .wild {
+            color: $light-color;
+            font-family: $text-font;
+            font-size: calc(9px + 6 * ((100vw - 320px) / 680));
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+                text-decoration: none;
+                color:$dark-color;
+                font-family: $text-font;
+                font-weight: 500;
+                font-size: calc(9px + 6 * ((100vw - 320px) / 680));
+            }
+
+            .active {
+                border-bottom: solid 2px $primary-color;
+
+                a {
+                    color: $primary-color;
+                }
+            }
+        }
+
+        svg {
+            width: 9px;
+            margin: 0 15px;
+            fill: $dark-color;
+        }
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 100vh;
+        grid-template-areas: "left right";
+
+        .left {
+            padding-left: 14%;
+            width: 86%;
+            height: 100%;
+            grid-area: left;
+            background-color: $dark-color;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                font-family: $text-font;
+                color: $light-color;
+                font-weight: 500;
+                font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+                margin: 25px 0;
+            }
+
+            button {
+                width: fit-content;
+                width: -moz-fit-content;
+                height: 40px;
+                display: flex;
+                align-items: center;
+                padding: 0 20px;
+                border-radius: 20px;
+                font-family: $text-font;
+                border: none;
+                background-color: $primary-color;
+                outline: none;
+                transition-duration: 0.2s;
+
+                svg {
+                    width: 12px;
+                    margin-right: 10px;
+                    fill: $light-color;
+                }
+
+                div {
+                    color: $light-color;
+                    font-weight: 500;
+                    font-size: 0.8rem;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    transition-duration: 0.2s;
+                    transform: scale(1.06);
+                }
+            }
+        }
+
+        .right {
+            width: 100%;
+            height: 100%;
+            grid-area: right;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 42vw;
+                height: 42vw;
+                object-fit: cover;
+            }
+        }
+    }
+}
+
+
