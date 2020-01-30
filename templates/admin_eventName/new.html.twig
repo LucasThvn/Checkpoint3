@@ -1,0 +1,11 @@
+{% extends 'admin_base.html.twig' %}
+
+{% block title %}New eventName{% endblock %}
+
+{% block body %}
+    <h1>Create new eventName</h1>
+
+    {{ include('admin_eventName/_form.html.twig') }}
+
+    <a href="{{ path('eventName_index') }}">back to list</a>
+{% endblock %}

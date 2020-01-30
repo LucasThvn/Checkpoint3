@@ -1,0 +1,5 @@
+<header>
+    <a href="{{ path('home') }}">Back to the Website </a>
+    <a href="{{ path('eventName_index') }}" class="{% if page == 'eventName' %}active{% endif %}">Events Name</a>
+    <a href="{{ path('event_index') }}" class="{% if page == 'event' %}active{% endif %}">Events</a>
+</header>
