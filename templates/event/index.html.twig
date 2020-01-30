@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block stylesheets %}
+    {{ encore_entry_link_tags('responsive_event') }}
+{% endblock %}
+
+{% set page = "event" %}
+
+{% block title %}About - Wild Circus{% endblock %}
+
+{% block body %}
+    <section class="left ticket-page">
+        <h1>GET<br>YOUR TICKET !</h1>
+    </section>
+    <section class="right">
+        <div class="tickets_container">
+            <div class="eventName">
+                <select class="selectpicker" onchange="window.location.href=this.value">
+                    {% if app.request.attributes.get('_route_params') == [] %}
+                        <option selected="selected">All events</option>
+                        {% for eventName in eventNames %}
+                            <option value="{{ path('eventName', { 'id': eventName.id}) }}">{{ eventName.name | capitalize }}</option>
+                        {% endfor %}
+                    {% else %}
+                        {% set categId = app.request.attributes.get('_route_params').id %}
+                        <option value="{{ path('event') }}">All events</option>
+                        {% for eventName in eventNames %}
+                            {% if categId == eventName.id %}
+                                <option selected="selected" value="{{ path('eventName', { 'id': eventName.id}) }}">{{ eventName.name| capitalize }}</option>
+                            {% else %}
+                                <option value="{{ path('eventName', { 'id': eventName.id}) }}">{{ eventName.name| capitalize }}</option>
+                            {% endif %}
+                        {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+            <div class="tickets">
+                {% for event in events %}
+                    <div class="ticket">
+                        <div class="available mr-3 mt-3">{{ event.available }} avaiable</div>
+                        <div class="p-4 h-100 d-flex justify-content-between flex-column">
+                            <div>
+                                <h4>{{ event.eventName.name | upper}}</h4>
+                                <h5>{{ event.place }}</h5>
+                            </div>
+                            <div class="description_button">
+                                <p class="pb-2">{{ event.description }}</p>
+                                <button>
+                                    <div>RESERVE</div>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

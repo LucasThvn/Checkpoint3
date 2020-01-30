@@ -1,0 +1,52 @@
+@media screen and (max-width: 1000px) {
+
+    .vistor_body {
+        main {
+            grid-template-rows: auto;
+            grid-template-areas: "up";
+            .left {
+                display: none;
+            }
+
+            .right {
+                .tickets_container {
+                    margin-top: 40px;
+
+                    .tickets {
+
+                        .ticket {
+
+                            h4 {
+                                font-size: calc(15px + 6 * ((100vw - 320px) / 680));
+                            }
+
+                            h5 {
+                                font-size: calc(12px + 6 * ((100vw - 320px) / 680));
+                            }
+
+                            .available {
+                                font-size: calc(8px + 6 * ((100vw - 320px) / 680));
+                            }
+
+                            .description_button {
+                                flex-direction: column;
+
+
+                                p {
+                                    height: auto;
+                                    font-size: 0.8rem;
+                                }
+
+                                button {
+                                    div {
+                                        font-size: calc(10px + 6 * ((100vw - 320px) / 680));
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
