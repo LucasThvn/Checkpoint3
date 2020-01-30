@@ -1,0 +1,26 @@
+{% extends 'admin_base.html.twig' %}
+
+{% block title %}eventName{% endblock %}
+
+{% block body %}
+    <h1>eventName</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+            </tr>
+            <tr>
+                <td>{{ eventName.id }}</td>
+                <td>{{ eventName.name }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('eventName_index') }}">back to list</a>
+
+    <a href="{{ path('eventName_edit', {'id': eventName.id}) }}">edit</a>
+
+    {{ include('admin_eventName/_delete_form.html.twig') }}
+{% endblock %}

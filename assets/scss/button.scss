@@ -1,0 +1,32 @@
+button {
+    width: fit-content;
+    width: -moz-fit-content;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    border-radius: 20px;
+    font-family: $text-font;
+    border: none;
+    background-color: $primary-color;
+    outline: none;
+    transition-duration: 0.2s;
+
+    svg {
+        width: 12px;
+        margin-right: 10px;
+        fill: $light-color;
+    }
+
+    div {
+        color: $light-color;
+        font-weight: 500;
+        font-size: calc(5px + 6 * ((100vw - 320px) / 680));
+    }
+
+    &:hover {
+        cursor: pointer;
+        transition-duration: 0.2s;
+        transform: scale(1.06);
+    }
+}
